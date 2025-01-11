@@ -1,0 +1,57 @@
+/* Styling for Contact Us Page */
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+  }
+  
+  .contact-info h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .contact-info ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 10px;
+  }
+  
+  .contact-info li i {
+    margin-right: 10px;
+  }
+  
+  .contact-info li strong {
+    color: #28a745; /* Green color for labels */
+  }
+  
+  form {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form button {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border: none;
+  }
+  
+  form button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  form .form-control {
+    border-radius: 5px;
+  }
+  
+  form .form-label {
+    font-weight: bold;
+  }
+  

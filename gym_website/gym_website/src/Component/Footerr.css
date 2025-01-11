@@ -1,0 +1,32 @@
+/* Footer Custom Styling */
+footer {
+    background-color: #343a40; /* Dark background color similar to navbar */
+    color: white;
+  }
+  
+  footer a {
+    transition: color 0.3s;
+  }
+  
+  footer a:hover {
+    color: #28a745; /* Green color for hover effect */
+  }
+  
+  footer .bi {
+    font-size: 1.5rem;
+  }
+  
+  footer .bi:hover {
+    color: #28a745; /* Hover effect for icons */
+  }
+  
+  footer .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  footer .text-center {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  

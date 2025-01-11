@@ -1,0 +1,42 @@
+/* Navbar styling for Gardening Theme */
+.navbar {
+    background-color: #2a9d8f; /* Greenish blue background */
+  }
+  
+  .navbar-brand {
+    color: #264653; /* Darker green for the brand name */
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .navbar-brand:hover {
+    color: #e9c46a; /* Yellowish color on hover */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #f4a261; /* Light orangish color for nav links */
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #e9c46a; /* Yellowish color on hover */
+  }
+  
+  .navbar-nav .nav-item {
+    padding: 0 10px;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #264653; /* Dark green for the burger icon */
+  }
+  
+  /* Background image for the navbar on large screens */
+  @media (min-width: 992px) {
+    .navbar {
+      background-image: url('https://images.unsplash.com/photo-1504593922352-79f3d987e278'); /* Gardening-related image */
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  

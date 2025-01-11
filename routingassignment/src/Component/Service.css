@@ -1,0 +1,20 @@
+/* Custom styles for images inside trainer cards */
+.trainer-img {
+    height: 200px; /* Set a fixed height */
+    width: 100%; /* Ensure it fills the width of the card */
+    object-fit: cover; /* Ensure images maintain their aspect ratio and fill the container */
+    border-top-left-radius: 10px; /* Rounded top-left corner */
+    border-top-right-radius: 10px; /* Rounded top-right corner */
+  }
+  
+  /* Optional: Hover effect to make the cards more interactive */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optional: Add padding inside the card for a cleaner look */
+  .card-body {
+    padding: 1.25rem;
+  }
+  

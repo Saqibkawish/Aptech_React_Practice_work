@@ -1,0 +1,436 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ /* Our native css  */
+/* Our Motive Section Styles */
+#our-motive {
+  background-color: #f0f8f2; /* Soft light green background */
+  padding: 50px 0;
+  border-radius: 10px;
+}
+
+#our-motive h2 {
+  font-size: 2rem;
+  color: #2a9d8f; /* Greenish text color */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#our-motive p {
+  font-size: 1.1rem;
+  color: #264653; /* Dark green text */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#our-motive img {
+  max-width: 100%; /* Ensures the image is responsive */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom image size adjustments */
+.custom-img {
+  max-height: 800px;
+  max-width: 800px; /* Set a maximum height for the image */
+  object-fit: cover; /* Ensures the image doesn't stretch/distort */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  #our-motive {
+    padding: 30px 0;
+  }
+  
+  #our-motive h2 {
+    text-align: center;
+  }
+  
+  #our-motive p {
+    text-align: justify;
+  }
+  
+  .custom-img {
+    max-height: 500px; /* Reduce image height on smaller screens */
+  }
+}
+
+
+/* about uss css  */
+
+/* About Us Section Styles */
+#about-us {
+  background-color: #f9fafb; /* Light background color */
+  padding: 60px 0;
+}
+
+#about-us h2 {
+  font-size: 2.5rem;
+  color: #2a9d8f; /* Teal color for the title */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#about-us p {
+  font-size: 1.2rem;
+  color: #264653; /* Dark green text color */
+  line-height: 1.8;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #555;
+}
+
+/* Adding shadow effect on the cards */
+.card-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  #about-us h2 {
+    font-size: 2rem;
+  }
+
+  .card-img-top {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+/* internal css  */
+
+/* Internal Services Table Styles */
+#internal-services {
+  background-color: #f8f9fa; /* Light background */
+  padding: 50px 0;
+  border-radius: 10px;
+}
+
+#internal-services h2 {
+  font-size: 2.5rem;
+  color: #2a9d8f; /* Teal color for header */
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Table Styles */
+.table {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+.table td {
+  font-size: 1.1rem;
+  color: #264653;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+.table-bordered {
+  border: 1px solid #ddd;
+}
+
+.table-bordered td, .table-bordered th {
+  border: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #internal-services h2 {
+    font-size: 2rem;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+}
+
+/* external  css  */
+
+/* External Services Table Styles */
+#external-services {
+  background-color: #f8f9fa; /* Light background */
+  padding: 50px 0;
+  border-radius: 10px;
+}
+
+#external-services h2 {
+  font-size: 2.5rem;
+  color: #2a9d8f; /* Teal color for header */
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Table Styles */
+.table {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+.table td {
+  font-size: 1.1rem;
+  color: #264653;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+.table-bordered {
+  border: 1px solid #ddd;
+}
+
+.table-bordered td, .table-bordered th {
+  border: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #external-services h2 {
+    font-size: 2rem;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* contact us css  */
+
+/* Contact Us Section Styles */
+#contact-us {
+  padding: 50px 0;
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 10px;
+}
+
+#contact-us h2 {
+  font-size: 2.5rem;
+  color: #2a9d8f; /* Teal color for header */
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+
+#contact-us .form-control {
+  font-size: 1.1rem;
+}
+
+#contact-us .btn {
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+#contact-us .col-md-6 {
+  margin-bottom: 30px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #contact-us h2 {
+    font-size: 2rem;
+  }
+
+  #contact-us .form-control {
+    font-size: 1rem;
+  }
+
+  #contact-us .btn {
+    font-size: 1rem;
+  }
+}
+
+/* customer review css  */
+
+/* Customer Reviews Section */
+#customer-reviews {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+#customer-reviews h2 {
+  font-size: 2.5rem;
+  color: #2a9d8f;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 100%;  /* Ensure cards fill the available space */
+}
+
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* Distribute space evenly */
+  height: 100%;  /* Fill the card's height */
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #264653;
+  font-weight: bold;
+}
+
+.rating {
+  font-size: 1.5rem;
+  color: #f39c12;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #5c6b6e;
+  margin-top: 15px;
+}
+
+.card-body p {
+  flex-grow: 1;  /* Allow the text to grow and take up available space */
+}
+
+@media (max-width: 768px) {
+  #customer-reviews h2 {
+    font-size: 2rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* faq css  */ 
+
+/* FAQ Section */
+#faq {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+#faq h2 {
+  font-size: 2.5rem;
+  color: #2a9d8f;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Accordion Styles */
+.accordion-button {
+  background-color: #ffffff;
+  color: #264653;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+.accordion-body {
+  font-size: 1rem;
+  color: #5c6b6e;
+  padding: 15px 20px;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.accordion-header {
+  border-bottom: none;
+}
