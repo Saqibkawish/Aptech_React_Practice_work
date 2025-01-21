@@ -112,3 +112,15 @@
     width: 80px; /* Resize for smaller screens */
   }
 }
+
+.fruits-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff6347; /* Tomato color for a fresh look */
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+
