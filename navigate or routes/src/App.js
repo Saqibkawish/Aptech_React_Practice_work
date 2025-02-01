@@ -10,6 +10,8 @@ import Home from './Compponent/Home';
 import Notfount from './Compponent/Notfount';
 import Registration from './Compponent/Rigistration';
 import Login from './Compponent/Login';
+import Pincode from './Compponent/Pincode';
+import Welcome from './Compponent/Welcome';
 
 
 function App() {
@@ -17,11 +19,13 @@ function App() {
    < BrowserRouter  >
     <div className="App">
     <Routes>
-        <Route path='/' element = {<Registration />} />
-        <Route path='/login' element = {<Login />} />
+        {/* <Route path='/' element = {<Registration />} /> */}
+        {/* <Route path='/login' element = {<Login />} /> */}
         {/* <Route path='karachi' element = {<Karachi />} />
         <Route path='islamabad' element = {<Islamabad />} />
         <Route path='lahour' element = {<Lahour />} /> */}
+        <Route path='/' element = {<Pincode />} /> 
+        <Route path='/welcome' element = {<Welcome />} /> 
         <Route path='*' element = {<Notfount />} />
 
       </Routes>
