@@ -10,6 +10,7 @@ import Array_With_object from './Component/Array_With_object';
 import QuizWithArray from './Component/QuizWithArray';
 import Planet_Assigmnent from './Component/Planet_Assigment';
 import To_do_list from './Component/To_do_list';
+import WordAndLetterCounting from './Component/WordAndLetterCounting';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* < Array_With_object /> */}
       {/* < QuizWithArray /> */}
       {/* < Planet_Assigmnent /> */}
-      < To_do_list />
+      {/* < To_do_list /> */}
+      <WordAndLetterCounting />
     </div>
   );
 }
