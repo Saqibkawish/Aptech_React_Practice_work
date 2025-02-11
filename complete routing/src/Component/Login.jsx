@@ -68,6 +68,7 @@ export default function Login() {
                                 >
                                     Submit
                                 </button>
+                                {show && <div className="alert alert-danger mt-3">{msg}</div>}
                             </div>
                         </div>
                     </div>
