@@ -19,31 +19,60 @@ export default function Login() {
     }
   return (
     <div>
-      <div className="container">
-      <h2>Login</h2>
-        
-        <div>
-          <label >Name:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Enter your email"
-          />
-        </div>
+            <div className="container mt-5">
+                <div className="card shadow-lg">
+                    <div className="card-header bg-primary text-white">
+                        <h3 className="text-center fw-bold">Login Form</h3>
+                    </div>
+                    <div className="card-body">
+                        <div>
+                            {/* Name */}
+                            <div className="mb-3 row">
+                                <label htmlFor="firstName" className="col-sm-3 col-form-label">
+                                    Name:
+                                </label>
+                                <div className="col-sm-9">
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                        placeholder="Enter your Name"
+                                    />
+                                </div>
+                            </div>
 
-        <div>
-          <label >Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter your password"
-          />
-        </div>
+                            {/* Password */}
+                            <div className="mb-3 row">
+                                <label htmlFor="email" className="col-sm-3 col-form-label">
+                                    Password:
+                                </label>
+                                <div className="col-sm-9">
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        className="form-control"
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                        placeholder="Enter your Password"
+                                    />
+                                </div>
+                            </div>
 
-        <button className='btn btn-primary my-3'  onClick={login_logic}>Login</button>
-    </div>
-    </div>
+                            {/* Submit Button */}
+                            <div className="text-center">
+                                <button
+                                    type="button"
+                                    className="btn btn-primary px-5"
+                                    onClick={login_logic}
+                                >
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
   )
 }
