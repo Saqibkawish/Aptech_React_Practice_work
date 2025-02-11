@@ -10,7 +10,7 @@ export default function Login() {
 
     function login_logic(){
         if(name === "killer" && password === "killer"){
-            pagechange('/ser',{state :{a: "Message fromlogin page", b : name}});
+            pagechange('/ser',{state :{a: "Message from login page", b : name}});
             setMsg("")
         } else {
             setMsg("Invalid credentials");
