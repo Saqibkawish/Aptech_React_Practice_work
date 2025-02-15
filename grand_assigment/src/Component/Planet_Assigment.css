@@ -1,0 +1,66 @@
+/* Styling for the entire container */
+.container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Search Input */
+  .search-input {
+    padding: 10px;
+    margin: 20px 0;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Styling for the planet cards container */
+  .planet-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Styling for individual planet cards */
+  .planet-card {
+    width: 250px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .planet-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Styling for planet image */
+  .planet-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Styling for headings and text */
+  h1 {
+    color: #333;
+  }
+  
+  h3 {
+    color: #333;
+    font-size: 1.2em;
+  }
+  
+  p {
+    color: #555;
+    font-size: 14px;
+  }
+  
+  strong {
+    color: #333;
+  }
+  
