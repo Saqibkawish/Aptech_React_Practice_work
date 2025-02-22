@@ -36,7 +36,7 @@ export default function Show_data() {
 
 useEffect(()=>{
   if(isshow===true){
-    var timer = setTimeout(() => {setIsShow(false)},1000)
+    var timer = setTimeout(() => {setIsShow(false)},5000)
     return ()=>clearTimeout(timer)
   }
 },[isshow])
@@ -101,8 +101,9 @@ if (sort === "az") {
       <td>{a.employee_email}</td>
       <td>{a.employee_salary}</td>
       <td>{a.employee_gender}</td>
-      <td><i class=" btn btn-warning bi bi-pencil-square" ></i></td>
+      <td><i class="btn btn-warning bi bi-pencil-square" data-bs-toggle="modal" data-target="#exampleModal" ></i></td>
       <td><i className="btn btn-danger  bi bi-trash" onClick={()=>DeleteRecord(a.id,a.employee_name)}></i></td>
+      
     </tr>
 
   
@@ -121,6 +122,27 @@ if (sort === "az") {
         }
         
      </div>
+
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
   )
 }
