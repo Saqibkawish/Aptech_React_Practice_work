@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.css"
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import Employe_form from './Component/Employe_form';
 import Notfound from './Component/Notfound';
 import Login_form from './Component/Login_form';
