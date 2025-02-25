@@ -9,6 +9,31 @@ export default function Show_data() {
     let [msg , setMsg] = useState ('')
     let [sort , setSort] = useState ('')
 
+    
+// 1
+    // txtboxstate
+    let [name, setName]=useState("")
+    let [email, setEmail]=useState("")
+    let [gender, setGender]=useState("")
+    let [pswd, setPSwd]=useState("")
+    let [salary, setSalary]=useState("")
+    let [Desig, setDesig]=useState("")
+    let [depart, setDepart]=useState("")
+    let [id, setId]=useState(null)
+
+    // 2
+    function fetch_Record(a,b,c,d,e,f,g,h){
+      setName(a)
+      setSalary(b)
+      setEmail(c)
+      setGender(d)
+      setDepart(e)
+      setDesig(f)
+      setId(g)
+      
+
+    }
+
     useEffect(()=>{
         axios.get("https://67b418f7392f4aa94fa94a41.mockapi.io/Employe_data")
         .then((data_aya)=>{
@@ -32,6 +57,37 @@ export default function Show_data() {
           })
         }
       }
+
+       // 5
+    // Update Logic
+
+    function UpdateLogic(){
+      axios.put(`https://67b418f7392f4aa94fa94a41.mockapi.io/Employe_data/${id}`,
+        {
+          employee_name: name,
+          employee_email: email,
+          employee_salary:salary,
+          employee_department: depart,
+          employee_designation: Desig,
+          employee_password :pswd,
+          employee_gender: gender,
+         
+        }
+      )
+      .then(()=>{
+        setRecod((i)=>i.map((a)=>a.id ===  id ? {...a, 
+          employee_name: name,
+          employee_email: email,
+          employee_salary:salary,
+          employee_department: depart,
+          employee_designation: Desig,
+          employee_password :pswd,
+          employee_gender: gender,
+        } : a))
+          setMsg("Record Updated Successfully")
+          setIsShow(true)
+      }).catch((e)=>{console.error(e)})
+    }
 // timer for msg 
 
 useEffect(()=>{
@@ -88,6 +144,8 @@ if (sort === "az") {
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Salary</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Department</th>
                 <th scope="col">Gender</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
@@ -100,8 +158,12 @@ if (sort === "az") {
       <td>{a.employee_name}</td>
       <td>{a.employee_email}</td>
       <td>{a.employee_salary}</td>
+      <td>{a.employee_designation}</td>
+      <td>{a.employee_department}</td>
       <td>{a.employee_gender}</td>
-      <td><i class="btn btn-warning bi bi-pencil-square" data-bs-toggle="modal" data-target="#exampleModal" ></i></td>
+      <td><i className="btn btn-warning  bi bi-pencil" data-bs-toggle="modal" 
+      data-bs-target="#exampleModal" onClick={()=>fetch_Record
+      (a.employee_name,a.employee_salary,a.employee_email,a.employee_gender,a.employee_department,a.employee_designation,a.id)}></i></td>
       <td><i className="btn btn-danger  bi bi-trash" onClick={()=>DeleteRecord(a.id,a.employee_name)}></i></td>
       
     </tr>
@@ -123,26 +185,36 @@ if (sort === "az") {
         
      </div>
 
-     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Your Data</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
+                             
+                            <input type="text" placeholder='Edit Name' className='form-control my-3' value={name} onChange={(e)=>{setName(e.target.value)}}/>
+                            <input type="number" placeholder='Edit Salary' className='form-control my-3' value={salary} onChange={(e)=>{setSalary(e.target.value)}}/>
+                            <input type="password" placeholder='Edit Password' className='form-control my-3' value={pswd} onChange={(e)=>{setPSwd(e.target.value)}}/>
+                            <input type="email" placeholder='Edit Email' className='form-control my-3' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
+                            <input type="text" placeholder='Edit Designation' className='form-control my-3' value={Desig} onChange={(e)=>{setDesig(e.target.value)}}/>
+                            <input type="text" placeholder='Edit Department' className='form-control my-3'  value={depart} onChange={(e)=>{setDepart(e.target.value)}}/>
+                            <input type='radio' name="gender" value="Male" onChange={(e)=>{setGender(e.target.value)}} checked={gender === "m"}/>&nbsp;Male&nbsp;
+                            <input type='radio' name="gender" value="female"   onChange={(e)=>{setGender(e.target.value)}} checked={gender === "fm"}/>&nbsp;Female
+
+                        </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary close_btn" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onClick={()=>{
+          UpdateLogic()
+          document.querySelector(".close_btn").click()  
+          }}>Save changes</button>
       </div>
     </div>
   </div>
 </div>
-
     </div>
   )
 }
