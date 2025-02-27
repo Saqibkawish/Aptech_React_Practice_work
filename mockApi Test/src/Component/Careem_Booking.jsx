@@ -121,14 +121,30 @@ function clear() {
             <label className="form-label">Promo Code</label>
             <input type="text" className="form-control" value={promoCode} onChange={(e) => setPromoCode(e.target.value)} />
           </div>
-          <div className="form-check">
-            <input type="checkbox" className="form-check-input" checked={childSeat} onChange={(e) => setChildSeat(e.target.checked)} />
-            <label className="form-check-label">Need a Child Seat?</label>
-          </div>
-          <div className="form-check">
-            <input type="checkbox" className="form-check-input" checked={wheelchair} onChange={(e) => setWheelchair(e.target.checked)} />
-            <label className="form-check-label">Wheelchair Accessible?</label>
-          </div>
+          <div className="mt-3">
+                    <label className="form-label ">Need a Child Seat?</label>
+                    <div className="d-flex gap-3">
+                        <div>
+                            <input type="radio" name="Seat" value="Yes" onChange={(e) => setChildSeat(e.target.value)} checked={childSeat === "Yes"} /> YES
+                        </div>
+                        <div>
+                            <input type="radio" name="Seat" value="No" onChange={(e) => setChildSeat(e.target.value)} checked={childSeat === "No"} /> NO
+                        </div>
+                       
+                    </div>
+                </div>
+                <div className="mt-3">
+                    <label className="form-label ">NWheelchair Accessible?</label>
+                    <div className="d-flex gap-3">
+                        <div>
+                            <input type="radio" name="chair" value="Yes" onChange={(e) => setWheelchair(e.target.value)} wheelchair={childSeat === "Yes"} /> YES
+                        </div>
+                        <div>
+                            <input type="radio" name="chair" value="No" onChange={(e) => setWheelchair(e.target.value)} wheelchair={childSeat === "No"} /> NO
+                        </div>
+                       
+                    </div>
+                </div>
           <div className="mb-3">
             <label className="form-label">Additional Notes</label>
             <textarea className="form-control" value={additionalNotes} onChange={(e) => setAdditionalNotes(e.target.value)}></textarea>

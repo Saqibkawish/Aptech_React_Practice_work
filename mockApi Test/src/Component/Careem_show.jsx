@@ -41,13 +41,13 @@ export default function Careem_show() {
         <h1>Careem Booking Records</h1> 
         <Link className='btn btn-warning' to="/booking"> New Booking + </Link> 
         <input type="text"
-        placeholder='Enter Name to search Employee' 
+        placeholder='Enter Name to search Booking Record' 
         value={search}
         onChange={((a)=>setSearch(a.target.value))}
         className='form-control my-3'
         />
         <select className='form-select my 3' onChange={(s)=>setSort(s.target.value)} >
-          <option value=""> Select Starting Order</option>
+          <option value=""> Select Sorting Order</option>
           <option value="az">A-Z</option>
           <option value="za">Z-A</option>
         </select>
@@ -99,7 +99,7 @@ export default function Careem_show() {
         {
           search_ride.length === 0 && 
           (
-            <p  className="text-center mt-3 text-warning"> No Employee Record Found</p>
+            <p  className="text-center mt-3 text-warning"> No Booking Record Found</p>
             )
         }
         
