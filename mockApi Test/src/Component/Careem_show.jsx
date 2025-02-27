@@ -41,7 +41,7 @@ export default function Careem_show() {
         <h1>Careem Booking Records</h1> 
         <Link className='btn btn-warning' to="/booking"> New Booking + </Link> 
         <input type="text"
-        placeholder='Enter Name to search Booking Record' 
+        placeholder='Enter Name to search  Record' 
         value={search}
         onChange={((a)=>setSearch(a.target.value))}
         className='form-control my-3'
