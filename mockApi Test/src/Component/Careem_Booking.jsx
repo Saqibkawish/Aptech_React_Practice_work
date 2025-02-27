@@ -13,8 +13,8 @@ export default function Careem_Booking() {
   const [pickupTime, setPickupTime] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
   const [promoCode, setPromoCode] = useState("");
-  const [childSeat, setChildSeat] = useState(false);
-  const [wheelchair, setWheelchair] = useState(false);
+  const [childSeat, setChildSeat] = useState("");
+  const [wheelchair, setWheelchair] = useState("");
   const [additionalNotes, setAdditionalNotes] = useState("");
   const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [isShow, setIsShow] = useState(false);
